@@ -5,38 +5,38 @@ function createElement(tagName, options, ...children) {
 }
 
 export function createTooltip() {
-  const titleTooltip = createElement("p", {
-    className: "title_tooltip",
-    textContent: "Вот и птичка ;)",
+  const titleTooltip = createElement('p', {
+    className: 'title_tooltip',
+    textContent: 'Вот и птичка ;)',
   });
 
   const headerTooltip = createElement(
-    "header",
+    'header',
     {
-      className: "header_tooltip",
+      className: 'header_tooltip',
     },
-    titleTooltip
+    titleTooltip,
   );
 
-  const messageTooltip = createElement("p", {
-    className: "message_tooltip",
-    textContent: "Спасибо, что выпустил птичку на волю!",
+  const messageTooltip = createElement('p', {
+    className: 'message_tooltip',
+    textContent: 'Спасибо, что выпустил птичку на волю!',
   });
 
   const contentTooltip = createElement(
-    "div",
+    'div',
     {
-      className: "content_tooltip",
+      className: 'content_tooltip',
     },
-    messageTooltip
+    messageTooltip,
   );
 
   const tooltipElement = createElement(
-    "div",
+    'div',
     {
-      className: "container_tooltip",
+      className: 'container_tooltip',
     },
-    ...[headerTooltip, contentTooltip]
+    ...[headerTooltip, contentTooltip],
   );
 
   return tooltipElement;
@@ -44,7 +44,7 @@ export function createTooltip() {
 
 export default function checkTooltip(button) {
   const parent = button.offsetParent;
-  const tooltipBox = document.querySelector(".container_tooltip");
+  const tooltipBox = document.querySelector('.container_tooltip');
   if (!tooltipBox) {
     const tooltip = createTooltip();
     parent.appendChild(tooltip);

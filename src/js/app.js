@@ -1,8 +1,8 @@
-import checkTooltip from "./Tooltip";
+import checkTooltip from './Tooltip';
 
-const button = document.querySelector(".button");
+const button = document.querySelector('.button');
 
-button.addEventListener("click", (event) => {
+button.addEventListener('click', (event) => {
   event.preventDefault();
   checkTooltip(button);
 });
